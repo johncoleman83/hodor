@@ -17,4 +17,5 @@ mission = "<td>\n123    </td>\n    <td>\n1024    </td>"
 r = requests.get(url, params=data)
 while mission not in r.text:
     r = requests.post(url, data=data, headers=headers)
+    # print(r.url, r.status_code, r.headers, r.text, sep='\n\n\n')
     time.sleep(2)
