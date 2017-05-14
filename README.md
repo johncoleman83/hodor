@@ -24,24 +24,24 @@ __Level 0__
 __Level 1__
 
 * Write a script or a program that votes 4096 times for your id here:
-* http://54.221.6.249/level0.php
+* http://54.221.6.249/level1.php
 
 __Level 2__
 
 * Write a script or a program that votes 1024 times for your id here:
-* http://54.221.6.249/level0.php
+* http://54.221.6.249/level2.php
 
 __Level 3__
 * Write a script or a program that votes 1024 times for your id here:
-* http://54.221.6.249/level0.php
+* http://54.221.6.249/level3.php
 
 __Level 4__
 * Write a script or a program that votes 98 times for your id here:
-* http://54.221.6.249/level0.php
+* http://54.221.6.249/level4.php
 
 __Tim Britton's special__
 * Write a script or a program that votes 1024 times for your id here:
-* http://54.221.6.249/level0.php
+* http://54.221.6.249/level5.php
 
 ## Author
 
