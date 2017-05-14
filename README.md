@@ -16,29 +16,32 @@ specific number of times accounting for various security measures.
 
 ## The Challenges
 
-0. Level 0 #advanced
-Write a script or a program that votes 1024 times for your id here:
-http://54.221.6.249/level0.php
+__Level 0__
 
-1. Level 1 #advanced
-Write a script or a program that votes 4096 times for your id here:
-http://54.221.6.249/level0.php
+* Write a script or a program that votes 1024 times for your id here:
+* http://54.221.6.249/level0.php
 
-2. Level 2 #advanced
-Write a script or a program that votes 1024 times for your id here:
-http://54.221.6.249/level0.php
+__Level 1__
 
-3. Level 3 #advanced
-Write a script or a program that votes 1024 times for your id here:
-http://54.221.6.249/level0.php
+* Write a script or a program that votes 4096 times for your id here:
+* http://54.221.6.249/level0.php
 
-4. Level 4 #advanced
-Write a script or a program that votes 98 times for your id here:
-http://54.221.6.249/level0.php
+__Level 2__
 
-5. Tim Britton's special #advanced
-Write a script or a program that votes 1024 times for your id here:
-http://54.221.6.249/level0.php
+* Write a script or a program that votes 1024 times for your id here:
+* http://54.221.6.249/level0.php
+
+__Level 3__
+* Write a script or a program that votes 1024 times for your id here:
+* http://54.221.6.249/level0.php
+
+__Level 4__
+* Write a script or a program that votes 98 times for your id here:
+* http://54.221.6.249/level0.php
+
+__Tim Britton's special__
+* Write a script or a program that votes 1024 times for your id here:
+* http://54.221.6.249/level0.php
 
 ## Author
 
