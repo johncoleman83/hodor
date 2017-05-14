@@ -1,22 +1,24 @@
 #!/usr/bin/python3
 """
-function to continually add input to form
-uses requests:
+testing app for hodor apps
+uses requests library
 helper variables: r.url, r.status_code, r.headers, r.text
 """
 import requests
 import multiprocessing
 
-URL = 'http://54.221.6.249/level1.php'
+URL = 'http://54.221.6.249/level0.php'
 HEADERS = {'content-type': 'application/x-www-form-urlencoded'}
 DATA = {
     'id': '123',
     'holdthedoor': 'submit',
     'key': ''
 }
+
 COOKIES = {
     'HoldTheDoor': ''
 }
+
 ID = '123'
 VOTES = 0
 
@@ -56,5 +58,13 @@ def app():
     vote(4096)
 
 
+def test():
+    r = requests.get(URL)
+    count_votes(r.text)
+    print('Votes = {:d} for ID: {:}'.format(VOTES, ID))
+    print('status code:\n', r.status_code)
+    print('headers:\n', r.headers)
+
+
 if __name__ == '__main__':
-    app()
+    test()
