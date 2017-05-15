@@ -1,31 +1,31 @@
 #!/usr/bin/python3
 """
-function to continually add input to form
-uses requests:
-helper variables: r.url, r.status_code, r.headers, r.text
+app to continually add input to form with python requests lib
 """
 import requests
 import multiprocessing
 
 URL = 'http://54.221.6.249/level1.php'
-HEADERS = {'content-type': 'application/x-www-form-urlencoded'}
+HEADERS = {'Content-Type': 'application/x-www-form-urlencoded'}
 DATA = {
     'id': '123',
     'holdthedoor': 'submit',
     'key': ''
-}
+    }
 COOKIES = {
     'HoldTheDoor': ''
-}
-ID = '123'
+    }
+ID = '<td>\n123    </td>'
 VOTES = 0
+
 
 def count_votes(htmlstring):
     global VOTES
     for i in range(len(htmlstring)):
         if htmlstring[i:(i + len(ID))] == ID:
-            VOTES = int(htmlstring[(i + 22):(i + 28)])
+            VOTES = int(htmlstring[(i + 27):(i + 33)])
             break
+    Votes = 0
 
 
 def vote(end):
@@ -54,6 +54,9 @@ def app():
     for i in running:
         i.join()
     vote(4096)
+    print('************************')
+    print('Votes = {:d} for ID: {:}'.format(VOTES, ID))
+    print('************************')
 
 
 if __name__ == '__main__':

