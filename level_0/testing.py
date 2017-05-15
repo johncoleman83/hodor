@@ -11,17 +11,16 @@ DATA = {
     'id': '123',
     'holdthedoor': 'submit',
     }
-
 ID = '<td>\n123    </td>'
 VOTES = 0
+
 
 def count_votes(htmlstring):
     global VOTES
     for i in range(len(htmlstring)):
         if htmlstring[i:(i + len(ID))] == ID:
-            VOTES = int(htmlstring[(i + 27):(i + 33)])
+            VOTES = int(htmlstring[(i + 27):(i + 32)])
             break
-    Votes = 0
 
 
 def vote(end):
@@ -55,7 +54,7 @@ def app():
 def test():
     r = requests.get(URL)
     count_votes(r.text)
-    print('Votes = {:d} for ID: {:}'.format(VOTES, ID))
+    print('Votes = {:d} for ID: {:}'.format(VOTES, ID[5:8]))
     print('status code:\n', r.status_code)
     print('headers:\n', r.headers)
 #    print('text:\n', r.text)

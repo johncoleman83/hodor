@@ -23,9 +23,8 @@ def count_votes(htmlstring):
     global VOTES
     for i in range(len(htmlstring)):
         if htmlstring[i:(i + len(ID))] == ID:
-            VOTES = int(htmlstring[(i + 27):(i + 33)])
+            VOTES = int(htmlstring[(i + 27):(i + 32)])
             break
-    Votes = 0
 
 
 def vote(end):
@@ -55,7 +54,7 @@ def app():
         i.join()
     vote(4096)
     print('************************')
-    print('Votes = {:d} for ID: {:}'.format(VOTES, ID))
+    print('Votes = {:d} for ID: {:}'.format(VOTES, ID[5:8]))
     print('************************')
 
 

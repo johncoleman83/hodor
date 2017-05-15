@@ -6,9 +6,13 @@ import requests
 import multiprocessing
 
 URL = 'http://54.221.6.249/level2.php'
-HEADERS = {'Content-Type': 'application/x-www-form-urlencoded',
-           'User-Agent': ('Mozilla/5.0 (compatible; MSIE 9.0; '
-                          'Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)')
+URL = 'http://54.221.6.249/level2.php'
+HEADERS = {'content-type': 'application/x-www-form-urlencoded',
+           'Referer': 'http://54.221.6.249/level2.php',
+           'User-Agent': ('Mozilla/5.0 (Windows NT 10.0; <64-bit tags>) AppleWe'
+                          'bKit/<WebKit Rev> (KHTML, like Gecko) Chrome/<Chrome'
+                          'Rev> Safari/<WebKit Rev> Edge/<EdgeHTML Rev>.<Window'
+                          's Build>')
            }
 DATA = {
     'id': '123',
@@ -26,9 +30,8 @@ def count_votes(htmlstring):
     global VOTES
     for i in range(len(htmlstring)):
         if htmlstring[i:(i + len(ID))] == ID:
-            VOTES = int(htmlstring[(i + 27):(i + 33)])
+            VOTES = int(htmlstring[(i + 27):(i + 32)])
             break
-    Votes = 0
 
 
 def vote(end):
@@ -58,7 +61,7 @@ def app():
         i.join()
     vote(1024)
     print('************************')
-    print('Votes = {:d} for ID: {:}'.format(VOTES, ID))
+    print('Votes = {:d} for ID: {:}'.format(VOTES, ID[5:8]))
     print('************************')
 
 if __name__ == '__main__':

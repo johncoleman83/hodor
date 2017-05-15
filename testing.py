@@ -64,7 +64,7 @@ def app():
 def test():
     r = requests.get(URL)
     count_votes(r.text)
-    print('Votes = {:d} for ID: {:}'.format(VOTES, ID))
+    print('Votes = {:d} for ID: {:}'.format(VOTES, ID[5:8]))
     print('status code:\n', r.status_code)
     print('headers:\n', r.headers)
 #    print('text:\n', r.text)

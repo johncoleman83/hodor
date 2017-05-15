@@ -9,29 +9,30 @@ import multiprocessing
 
 URL = 'http://54.221.6.249/level2.php'
 HEADERS = {'content-type': 'application/x-www-form-urlencoded',
-           'User-Agent': ('Mozilla/5.0 (compatible; MSIE 9.0; '
-                          'Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)')
+           'Referer': 'http://54.221.6.249/level2.php',
+           'User-Agent': ('Mozilla/5.0 (Windows NT 10.0; <64-bit tags>) AppleWe'
+                          'bKit/<WebKit Rev> (KHTML, like Gecko) Chrome/<Chrome'
+                          'Rev> Safari/<WebKit Rev> Edge/<EdgeHTML Rev>.<Window'
+                          's Build>')
            }
 DATA = {
-    'id': '123',
+    'id': '121',
     'holdthedoor': 'submit',
     'key': ''
     }
-
 COOKIES = {
     'HoldTheDoor': ''
     }
-
-ID = '<td>\n123    </td>'
+ID = '<td>\n121    </td>'
 VOTES = 0
+
 
 def count_votes(htmlstring):
     global VOTES
     for i in range(len(htmlstring)):
         if htmlstring[i:(i + len(ID))] == ID:
-            VOTES = int(htmlstring[(i + 27):(i + 33)])
+            VOTES = int(htmlstring[(i + 27):(i + 32)])
             break
-    Votes = 0
 
 
 def vote(end):
@@ -65,9 +66,10 @@ def app():
 def test():
     r = requests.get(URL)
     count_votes(r.text)
-    print('Votes = {:d} for ID: {:}'.format(VOTES, ID))
+    print('Votes = {:d} for ID: {:}'.format(VOTES, ID[5:8]))
     print('status code:\n', r.status_code)
     print('headers:\n', r.headers)
+    vote(5)
 #    print('text:\n', r.text)
 
 
