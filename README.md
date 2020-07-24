@@ -2,7 +2,7 @@
 
 ## Description
 
-This Repo has various apps for the hodor project for Bootcamp School.  Each app
+This Repo has various apps for the hodor project for a software development program.  Each app
 uses requests library from python to GET HTML from various pages at the URL:
 `http://54.221.6.249/`.  Then, the apps POST data to a form that replicates a
 voting poll.  My ID is 123 on all the forms, and the apps vote for my ID a
